@@ -1,0 +1,1496 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.bg-body-tertiary{
+    background-color: white !important;
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    z-index: 10;
+    top: 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.container-fluid{
+  position: relative;
+}
+
+.logo{
+
+    position: relative;
+    left: 50px;
+    font-weight: bolder;
+    font-size: x-large;
+
+}
+
+.d-flex{
+
+    position: relative;
+    right: 40%;
+    width: 40%;
+
+}
+
+.me-auto {
+height: 10px;
+}
+
+// hamburger styles
+
+.hamburger{
+  
+  position: fixed;
+  left: 35px;
+  top: 25px;
+  z-index: 100;
+  cursor: pointer;
+
+}
+
+p{
+  font-size: large;
+  font-weight: 400;
+  display: block;
+  width: 500px;
+  position: relative;
+  right: 5%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+p:hover{
+  background-color: rgba(246, 243, 243, 0.844);
+}
+
+.icons{
+
+    display: flex;
+    gap:15px;
+    position: relative;
+    right: 5%;
+    font-size: larger;
+    cursor: pointer;
+
+}
+
+.carousel{
+    top: 80px; 
+}
+
+.d-block{
+    height: 350px;
+}
+
+
+// styles for login form 
+
+.input-container {
+    position: relative;
+    margin-top: 10%;
+  }
+  
+  .input {
+    font-size: 1em;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    color: #333;
+  }
+  
+  .input:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .input:focus, .input2:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input::placeholder, .input2::placeholder {
+    color: #999;
+  }
+  
+  .highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: dodgerblue;
+    transition: width 0.3s ease;
+  }
+  
+  .input:focus + .highlight {
+    width: 100%;
+  }
+  
+  /* Optional: Animation on focus */
+  @keyframes input-focus {
+    from {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+  
+    to {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .input:focus {
+    animation: input-focus 0.3s ease;
+  }
+
+  //edit Profile styles
+
+  .input-container2 {
+    position: relative;
+    left: 35%;
+    top: 100px;
+    margin-top: 30px;
+  }
+
+  .input2 {
+    font-size: 1em;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    color: #333;
+  }
+
+    
+  .input2:focus + .highlight {
+    width: 30%;
+  }
+  
+
+  //   styles for button
+  
+  .button {
+    position: relative;
+    top: 30px;
+    width: 35%;
+    font-size: larger;
+    font-weight: bolder;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: dodgerblue;
+    transition: all 0.2s ease;
+  }
+  
+  .button:active {
+    transform: scale(0.96);
+  }
+  
+  .button:before,
+  .button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  .button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, dodgerblue 20%, transparent 30%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.9s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+
+// edit button styles
+
+.editbtn{
+  position: relative;
+    top: 150px;
+    left: 39%;
+    width: 10%;
+    font-size: medium;
+    font-weight: bolder;
+    border-radius: 6px;
+    padding: 10px 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: dodgerblue;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+}
+
+  // styles for register-link
+
+.link{
+    position: relative;
+    top: 40px;
+    cursor: pointer;
+    color: dodgerblue;
+}
+
+.link:hover{
+  text-decoration: underline;
+  background-color: white;
+}
+
+.button2{
+  border-color: dodgerblue;
+  color: black;
+}
+
+.button2:hover{
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+}
+
+// offcanvas lists styles 
+
+li{
+  list-style: none;
+  font-size: large;
+  font-size: larger;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.links{
+  text-decoration: none;
+  color: black;
+}
+
+li:hover{
+  color: dodgerblue;
+}
+
+// card styles
+
+.maincard{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 5%;
+  align-items: center;
+  margin-top: 100px;
+  gap: 20px;
+  width: 100%;
+}
+
+.card-container {
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  --main-focus: #2d8cf0;
+  width: 250px;
+  height: 320px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 20px;
+  gap: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card-container:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.559);
+}
+
+.productimg{
+  width: 120px;
+  height: 100px;
+  position: relative;
+  left: 23%;
+}
+.card:last-child {
+  justify-content: flex-end;
+}
+
+.card-title {
+  text-align: center;
+  color: var(--font-color);
+}
+
+.card-subtitle {
+  width: 200px;
+  height: 1.5em;
+  color: var(--font-color-sub);
+}
+
+
+.card-divider {
+  width: 100%;
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+
+.card-btn {
+  height: 35px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  padding: 0 15px;
+  transition: all 0.3s;
+}
+
+.card-btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--main-color);
+  transition: all 0.3s;
+}
+
+.card-img:hover {
+  transform: translateY(-3px);
+}
+
+.card-btn:hover {
+  border: 2px solid var(--main-focus);
+}
+
+.card-btn:hover svg {
+  fill: var(--main-focus);
+}
+
+.card-btn:active {
+  transform: translateY(3px);
+}
+
+// styling for product links
+
+.dlink{
+  text-decoration: none;
+  color: black;
+}
+
+// productDetails page styles 
+
+.productImage{
+
+  width: 40%;
+  position: relative;
+  left: 5%;
+  top: 60px;
+}
+
+.product-info{
+  
+  position: relative;
+  left: 47%;
+  bottom: 500px;
+  width: 50%;
+}
+
+.product-options{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 47%;
+  bottom: 450px;
+  row-gap: 15px;
+}
+
+.pdbtn{
+
+  position: relative;
+  left: 50%;
+  bottom: 400px;
+}
+
+.pdbody{
+  background-color: white;
+  margin-top: 2px;
+  overflow: hidden;
+}
+
+.product-details-conten{
+  position: relative;
+  left: 800px;
+}
+
+// ADD TO CART STYLES 
+
+.box {
+  width: 200px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+.addtocartbtn {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  position: relative;
+  left: 48%;
+  bottom: 400px;
+  margin-right: 40px;
+}
+
+.addtocartbtn:active{
+transform: scale(0.9);
+}
+
+.pdbuttons{
+  display: flex;
+  gap: 30px;
+}
+
+.product-details-content{
+  position: relative;
+  left: 50%;
+  bottom: 300px;
+  width: 50%;
+}
+
+.iconlink{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  bottom: 5px;
+}
+
+.cartMain{
+ position: relative;
+ bottom: 50px;
+}
+
+.cartheading{
+  position: relative;
+  top: 140px;
+  left: 5%;
+}
+
+ .cartbody{
+   height: 260px;
+ }
+
+.cartlist{
+  position: relative;
+  left: 23%;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 12px;
+}
+.cartimg{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 5%;
+  top: 50px;
+}
+
+.cartContainer{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  position: relative;
+  left: 5%;
+  top: 150px;
+  width: 60%;
+  height: 250px;
+  
+}
+
+.cartcolor{
+  font-size: medium;
+  font-weight: 400;
+}
+
+.cartCount{
+  position: absolute;
+  bottom: 23px;
+  left: 85%;
+  font-size: small;
+  font-weight: 900;
+  color: white;
+  height: 10px;
+}
+
+.cartMsg{
+  position: relative;
+  top: 150px;
+  left: 3%;
+}
+
+.cartbtn{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-left: 20px;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+#qty{
+  position: relative;
+  left: 10px;
+}
+
+//order summary div styles
+
+.summaryDiv{
+  border: 1px solid lightgray;
+  width: 28%;
+  height: 400px;
+  background-color: #f5f5f5;
+  position: sticky;
+  left: 67%;
+  bottom: 150px;
+  border-radius: 5px;
+}
+
+.subSummaryDiv{
+  background-color: white;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  bottom: 12px;
+  height: 340px;
+  border-radius: 5px;
+}
+
+.pricediv{
+  position: relative;
+  left: 5%;
+  top: 30px;
+  margin: 20px;
+}
+
+.amountspan{
+  position: relative;
+  left: 60%;
+  font-size: medium;
+}
+
+.placeOrderBtn{
+  width: 75%;
+  height: 50px;
+  position: relative;
+  left: 12%;
+  background-color: black;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.placeOrderBtn:hover{
+  transform: scale(1.01);
+}
+
+.placeOrderBtn:active{
+  transform: scale(0.98);
+}
+
+
+//random products styles on home
+
+.randomProducts{
+
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-around;
+  top: 100px;
+  width: 98%;
+  height: 350px;
+  border: 1px solid lightgray;
+  position: relative;
+  left: 1%;
+  border-radius: 5px;
+
+}
+
+.randomdiv{
+  
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px; 
+  height: 250px;
+  position: relative;
+  top: 15%;
+}
+
+.randomimg{
+  width: 100px;
+  position: absolute;
+  bottom: 100px;
+}
+
+.shopNow{
+  position: relative;
+  top: 10px;
+}
+
+.randomDetails{
+  position: absolute;
+  top: 160px;
+  left: 5%;
+}
+
+.randomdiv:hover{
+  transform: scale(1.05);
+  
+  box-shadow: 0 0 15px lightgrey;
+}
+
+.wishlist{
+  position: relative;
+  left: 85%;
+  top: 30px;
+  z-index: 1;
+}
+
+//wishlist 
+
+.wishlistMain{
+  border: 1px solid lightgray;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  top: 120px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.wishlistimg{
+  width: 120px;
+  position: relative;
+  top: 25px;
+  left: 3%;
+}
+
+.wishlistsub{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 15%;
+  bottom: 60px;
+  width: 78%;
+}
+
+.wishlistHeading{
+  position: relative;
+  top: 100px;
+  left: 2%;
+}
+
+.whislistMsg{
+  position: relative;
+  top: 120px;
+  left: 3%;
+}
+
+//deleteIcon styles 
+
+.deleteIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+  left: 85%;
+  bottom: 35px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.deleteIcon:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.deleteIcon:hover .svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.deleteIcon::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.deleteIcon:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+// footer styles 
+
+.footer{
+  background-color: black;
+  position: relative;
+  top: 120px;
+  margin-top: 150px;
+}
+
+.footerHeading{
+  color: white;
+  position: relative;
+  top: 40px;
+  left: 3%;
+} 
+
+.linksDiv{
+  position: relative;
+  left: 25%;
+}
+
+.contactsDiv{
+  position: relative;
+  left: 50%;
+  bottom: 200px;
+  color: #666;
+}
+
+.footerlink{
+  color: #666;
+  list-style: none;
+  text-decoration: none;
+}
+
+.footer-bottom{
+  color: #666;
+}
+
+.footerlist{
+  
+  font-size: small;
+  position: relative;
+  bottom: 80px;
+}
+
+.footeritems{
+  display: flex;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.footerPara:hover{
+  background-color: black;
+}
+
+
+// about us styles
+
+.aboutUs{
+
+  position: relative;
+  top: 60px;
+  height: 50px;
+  line-height: 50px;
+  background-color: black;
+  color: white;
+  z-index: 3;
+
+}
+
+.aboutPara{
+  position: relative;
+  left: 5%;
+  width: 90%;
+  top: 100px;
+}
+
+.aboutlist{
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  top: 100px;
+}
+
+.aboutSpan{
+  font-size: medium;
+  font-weight: 400;
+}
+
+// Accordian styles
+
+.accordian{
+  width: 60%;
+  position: relative;
+  left: 2%;
+  top: 100px;
+}
+
+.accBtn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.accBtn {
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.accBtn .accSpan {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.accBtn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.accBtn:hover::after {
+  width: 100%;
+}
+
+.accBtn:hover .accSpan::before {
+  width: 100%;
+}
+
+.accBtn:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.accBtn svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+.accInputs{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 20px;
+}
+
+.accInput{
+  border-radius: 5px;
+  height: 35px;
+  border: 1px solid lightgray;
+}
+
+// payment options styles
+
+.visa-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 300px;
+  height: 180px;
+  background-image: radial-gradient(
+    circle 897px at 9% 80.3%,
+    rgba(55, 60, 245, 1) 0%,
+    rgba(234, 161, 15, 0.9) 100.2%
+  );
+  border-radius: 10px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  gap: 15px;
+}
+.logoContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 18px;
+}
+.svgLogo {
+  height: 40px;
+  width: auto;
+}
+.inputstyle::placeholder {
+  color: #ffffff;
+}
+.inputstyle {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  caret-color: red;
+  font-size: 13px;
+  height: 25px;
+  letter-spacing: 1.5px;
+}
+.number-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+#cardNumber {
+  width: 100%;
+  height: 25px;
+}
+.name-date-cvv-container {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  gap: 10px;
+}
+.name-wrapper {
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.expiry-wrapper,
+.cvv-wrapper {
+  width: 30%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.cvv-wrapper {
+  width: 10%;
+}
+#expiry,
+#cvv {
+  width: 100%;
+}
+.input-label {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: #e2e2e2;
+  width: 100%;
+}
+
+.accPriceDiv{
+  position: sticky;
+  bottom: 200px;
+  left: 77%;
+  width: 20%;
+  height: 300px;
+  background-color: #f5f5f5;
+
+}
+
+.accPriceSub{
+  background-color: white;
+  width: 85%;
+  position: relative;
+  left: 6%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.placeOrderImg{
+  width: 100px;
+}
+
+.orderDetailsDiv{
+  position: relative;
+  top: 100px;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  width: 90%;
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.orderDetailsImg{
+  width: 12%;
+  position: relative;
+  top: 40px;
+}
+
+.deliveryDetails{
+  position: relative;
+  left: 85%;
+  bottom: 200px;
+}
+
+ .navbar{
+   display: flex;
+   flex-wrap: wrap;
+  
+ }
+
+ //successMSg Styles 
+
+ .notifications-container {
+  width: 320px;
+  height: auto;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  top: 100px;
+  
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.successMsg{
+  position: fixed;
+}
+
+.success {
+  padding: 1rem;
+  border-radius: 0.375rem;
+  background-color: rgb(240 253 244);
+  position: relative;
+  left: 500px;
+  bottom: 750px;
+  width: 500px;
+  height: 300px;
+}
+
+.succes-svg {
+  color: rgb(74 222 128);
+  width: 1.25rem;
+  height: 1.25rem;
+  position: relative;
+  top: 5px;
+}
+
+.success-prompt-wrap {
+  margin-left: 0.75rem;
+}
+
+.success-prompt-heading {
+  font-weight: bold;
+  color: rgb(22 101 52);
+}
+
+.success-prompt-prompt {
+  margin-top: 0.5rem;
+  color: rgb(21 128 61);
+}
+
+.success-button-container {
+  display: flex;
+  margin-top: 0.875rem;
+  margin-bottom: -0.375rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.success-button-main {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #ECFDF5;
+  color: rgb(22 101 52);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  border-radius: 0.375rem;
+  border: none
+}
+
+.success-button-main:hover {
+  background-color: #D1FAE5;
+}
+
+.success-button-secondary {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 0.75rem;
+  background-color: #ECFDF5;
+  color: #065F46;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.375rem;
+  border: none;
+}
+
+.blur-background {
+  filter: blur(5px); /* Apply the blur effect */
+}
+
+
+
+ @media (max-width: 786px) {
+  .navbar-toggler-icon {
+    display: none !important;
+  }
+  .d-flex {
+    display: none !important;
+  }
+  .navbar-toggler{
+    display: none !important;
+  }
+
+  .randomProducts{
+    overflow-x: scroll;
+  }
+
+  .footer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .linksDiv{
+    position: relative;
+    display: flex;
+    left: 200px;
+    top: 10px;
+    padding: 0 0px;
+  }
+  
+  .contactsDiv{
+    position: relative;
+    top: 130px;
+    left:130px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .footerlist{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footeritems{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wishlistMain{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  li{
+    
+    position: relative;
+    top: 70px;
+  }
+  
+  h5{
+    font-size: medium;
+    position: relative;
+    top: 90px;
+  }
+
+  .deleteIcon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 70%;
+  }
+  .deleteIcon:hover{
+    width: 80px;
+  }
+
+  .offcanvas-title.h5{
+    position: relative;
+    top: 10px;
+    font-size: larger;
+  }
+
+  .cartContainer{
+    width: 455px;
+  }
+
+  .cartlistPara{
+    width: 300px;
+    position: relative;
+    left: 50px;
+    font-size: small;
+  }
+
+  .cartimg{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right: 100px;
+  }
+
+
+  .summaryDiv{
+    width: 70%;
+    position: relative;
+    top: 200px;
+    left: 70px;
+  }
+
+  .summaryHeading{
+    position: relative;
+    top: 0;
+  }
+
+  .amountspan{
+    position: relative;
+    left: 140px;
+  }
+
+  .orderDetailsDiv{
+    width: 95%;
+    position: relative;
+    right: 40px;
+  }
+
+  .deliveryDetails{
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;  
+  }
+
+  .orderDetailsImg{
+    width: 100px;
+  }
+
+  .deliveryDetails2{
+    position: relative;
+    top: 100px;
+    right: 50px;
+  }
+
+  .editbtn{
+    width: 150px;
+    position: relative;
+    left: 80px;
+  }
+
+  .input2{
+    width: 350px;
+    position: relative;
+    right: 100px;
+  }
+  
+  .summaryHead{
+    position: relative;
+    top: 0;
+  }
+
+  .successMsg{
+    position: fixed;
+    right: 620px;
+  }
+
+  .success{
+    width: 400px;
+  }
+
+  .accordian{
+    width: 450px;
+  }
+}
