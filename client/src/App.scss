@@ -1326,6 +1326,10 @@ transform: scale(0.9);
 
 
  @media (max-width: 786px) {
+
+  body{
+    overflow-x: hidden;
+  }
   .navbar-toggler-icon {
     display: none !important;
   }
