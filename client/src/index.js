@@ -81,15 +81,15 @@ let reducer = (latestStore = initialStore, dispatchedObj) => {
           ...latestStore, searchResults: dispatchedObj.data
         }
         case 'wishlist':
-          if (latestStore.userDetails) {
-            const userId = latestStore.userDetails;
-            const { data: wishlistItem } = dispatchedObj;
-            const user = latestStore.users[userId] || { wishlistItems: [] };
-            const updatedWishlistItems = [...user.wishlistItems, wishlistItem];
-            const updatedUsers = { ...latestStore.users, [userId]: { ...user, wishlistItems: updatedWishlistItems } };
-            return { ...latestStore, users: updatedUsers };
-          }
-          return latestStore;
+      if (latestStore.userDetails) {
+        const userId = latestStore.userDetails;
+        const { data: wishlistItem } = dispatchedObj;
+        const user = latestStore.users[userId] || { wishlistItems: [] };
+        const updatedWishlistItems = [...user.wishlistItems, wishlistItem];
+        const updatedUsers = { ...latestStore.users, [userId]: { ...user, wishlistItems: updatedWishlistItems } };
+        return { ...latestStore, users: updatedUsers };
+      }
+      return latestStore;
     
         case 'delete':
           if (latestStore.userDetails) {
