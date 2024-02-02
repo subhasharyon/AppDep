@@ -39,7 +39,7 @@ function Home() {
   return (
     <div>
         <TopNavigation/>
-        <div>
+        <div className='homeBody'>
         <Carousel data-bs-theme="dark">
       <Carousel.Item>
        <Link to={`/products/smart speaker`}>
